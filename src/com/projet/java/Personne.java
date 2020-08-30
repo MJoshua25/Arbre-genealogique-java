@@ -3,7 +3,6 @@ package com.projet.java;
 
 import java.io.Serializable;
 import java.util.LinkedList;
-import java.util.Scanner;
 
 public class Personne implements Serializable {
     String nom;
@@ -59,6 +58,11 @@ public class Personne implements Serializable {
         this.parent = parent;
         this.freres = new LinkedList<>();
         this.enfants = new LinkedList<>();
+    }
+
+    public void addEnfant(Personne enfant){
+        this.enfants.add(enfant);
+        enfant.parent = this;
     }
 
     @Override
