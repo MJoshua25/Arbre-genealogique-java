@@ -5,8 +5,8 @@ import java.util.Scanner;
 public class Process {
     private static Scanner clavier;
 
-    ArbreGenealogique arbreGenealogique = new ArbreGenealogique();
-    Personne root = null;
+    ArbreGenealogique arbreGenealogique = null;
+    Personne focus = null;
 
     public static void affichage(Object obj){
         System.out.print(obj);
