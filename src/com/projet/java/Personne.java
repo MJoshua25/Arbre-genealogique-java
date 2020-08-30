@@ -67,6 +67,8 @@ public class Personne implements Serializable {
             this.nom = sc.nextLine();
             System.out.print("Entrer le prenom: ");
             this.prenoms = sc.nextLine();
+            System.out.print("Entrer le prenom: ");
+            this.age = sc.nextInt();
             while(true)
             {
                 Process.affichage("\nSexe:\n 1. Masculin\n 2. Feminin\nChoix: ");
