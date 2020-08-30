@@ -12,7 +12,7 @@ public class Process {
         System.out.print(obj);
     }
 
-    public static void mainMenu(){
+    public void mainMenu(){
         int repeter = 1;
         while(repeter!=0) {
             affichage("  Menu  Principale\n\n");
@@ -23,6 +23,7 @@ public class Process {
             String option = new Scanner(System.in).next();
             switch (option){
                 case"1":
+                    this.arbreGenealogique = new ArbreGenealogique(new Personne("New"));
                     break;
                 case"2":
                     break;
