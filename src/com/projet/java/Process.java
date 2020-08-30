@@ -17,6 +17,17 @@ public class Process {
             affichage(" 2 - Choisir un arbre existant \n");
             affichage(" 0 - Quitter \n\n");
             affichage("Choisissez une option... ");
+            String option = new Scanner(System.in).next();
+            switch (option){
+                case"1":
+                    break;
+                case"2":
+                    break;
+                case"0":
+                    repeter =0;
+                    break;
+                default:
+                    break;
         }
     }
 }
