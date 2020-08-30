@@ -10,10 +10,13 @@ public class Process {
     }
 
     public static void mainMenu(){
-        affichage("  Menu  Principale\n\n");
-        affichage(" 1 - Creer un arbre \n");
-        affichage(" 2 - Choisir un arbre existant \n");
-        affichage(" 0 - Quitter \n\n");
-        affichage("Choisissez une option... ");
+        int repeter = 1;
+        while(repeter!=0) {
+            affichage("  Menu  Principale\n\n");
+            affichage(" 1 - Creer un arbre \n");
+            affichage(" 2 - Choisir un arbre existant \n");
+            affichage(" 0 - Quitter \n\n");
+            affichage("Choisissez une option... ");
+        }
     }
 }
