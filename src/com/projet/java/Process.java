@@ -21,18 +21,19 @@ public class Process {
             affichage(" 0 - Quitter \n\n");
             affichage("Choisissez une option... ");
             String option = new Scanner(System.in).next();
-            switch (option){
-                case"1":
+            switch (option) {
+                case "1":
                     this.arbreGenealogique = new ArbreGenealogique(new Personne("New"));
                     break;
-                case"2":
+                case "2":
                     affichage("en cours");
                     break;
-                case"0":
-                    repeter =0;
+                case "0":
+                    repeter = 0;
                     break;
                 default:
                     break;
-        }
-    }while (repeter!=0);
+            }
+        }while (repeter!=0);
+    }
 }
