@@ -89,7 +89,11 @@ public class Process {
     public void menuGestionFamille(){
         int repeat = 1;
         do {
-
-        }while (repeat!=0)
+            affichage("**** - Arbre Généalogique de la famille "+this.arbreGenealogique.root.getPrenoms()+" ****");
+            affichage("\n\n  1 - ajouter un membre à la famille \n");
+            affichage("  2 - Lister les membres de la famille\n" );
+            affichage("  0 - Retour \n\n" );
+            affichage("Veuillez choisir une option... ");
+        }while (repeat!=0);
     }
 }
