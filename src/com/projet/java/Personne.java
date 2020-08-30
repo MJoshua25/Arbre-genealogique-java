@@ -60,4 +60,9 @@ public class Personne implements Serializable {
         this.freres = new LinkedList<>();
         this.enfants = new LinkedList<>();
     }
+
+    @Override
+    public String toString() {
+        return nom + " " + prenoms + '(' + sexe + ')' ;
+    }
 }
