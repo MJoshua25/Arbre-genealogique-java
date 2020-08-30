@@ -2,6 +2,6 @@ package com.projet.java;
 
 import java.util.Scanner;
 
-public class process {
+public class Process {
     private static Scanner clavier;
 }
