@@ -11,6 +11,7 @@ public class Personne implements Serializable {
     String sexe;
     String statut;
     Personne parent;
+    Integer age;
     LinkedList<Personne> enfants;
     LinkedList<Personne> freres;
 
@@ -39,20 +40,22 @@ public class Personne implements Serializable {
     }
 
 
-    public Personne(String nom, String prenoms, String sexe){
+    public Personne(String nom, String prenoms, String sexe, Integer age){
 
         this.nom = nom;
         this.prenoms = prenoms;
         this.sexe = sexe;
+        this.age = age;
         this.parent = null;
         this.freres = new LinkedList<>();
         this.enfants = new LinkedList<>();
     }
-    public Personne(String nom, String prenoms, String sexe, Personne parent){
+    public Personne(String nom, String prenoms, String sexe, Personne parent, Integer age){
 
         this.nom = nom;
         this.prenoms = prenoms;
         this.sexe = sexe;
+        this.age = age;
         this.parent = parent;
         this.freres = new LinkedList<>();
         this.enfants = new LinkedList<>();
