@@ -94,6 +94,24 @@ public class Process {
             affichage("  2 - Lister les membres de la famille\n" );
             affichage("  0 - Retour \n\n" );
             affichage("Veuillez choisir une option... ");
+
+            String option = new Scanner(System.in).next();
+            affichage("\n");
+            switch (option) {
+                case "1":
+                    affichage("en développement");
+                    break;
+                case "2":
+                    affichage("en développement");
+                    break;
+                case "0":
+//                    ArbreGenealogique.saveTree(root);
+                    repeat = 0;
+                    break;
+
+                default:
+                    break;
+            }
         }while (repeat!=0);
     }
 }
