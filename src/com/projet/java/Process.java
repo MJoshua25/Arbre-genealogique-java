@@ -1,5 +1,6 @@
 package com.projet.java;
 
+import java.util.LinkedList;
 import java.util.Scanner;
 
 public class Process {
@@ -8,12 +9,56 @@ public class Process {
     ArbreGenealogique arbreGenealogique = null;
     Personne focus = null;
 
-    public void setTree(ArbreGenealogique arb){
+
+    //METHODE STATIQUE POUR AFFICHER UNE LES DONNÉES D'UNE LISTE
+    private static void afficherListe(LinkedList<Personne> liste, int num, String msg_error, String mode){
+        if ("Suivi".equals(mode)) {
+            if (!liste.isEmpty()) {
+                affichage(num + " - Resultat:\n\n");
+                liste.forEach(element -> {
+                    if (element != liste.getLast())
+                        affichage(element + " -> ");
+                    else {
+                        affichage(element + "\n\n");
+                    }
+                });
+                affichage("Appuyez sur une touche pour quitter.... ");
+                new Scanner(System.in).nextLine();
+            } else {
+                //Sinon
+                affichage(num + " - Resultat:\n\n");
+                affichage(msg_error + "\n\n");
+                affichage("Appuyez sur une entrer pour quitter.... ");
+                new Scanner(System.in).nextLine();
+            }
+        } else {
+            if (!liste.isEmpty()) {
+                affichage(num + " - Resultat:\n\n");
+                liste.forEach(element -> {
+                    affichage("\t" + element + "\n\n");
+                });
+                affichage("Appuyez sur une touche pour quitter.... ");
+                new Scanner(System.in).nextLine();
+            } else {
+                //Sinon
+                affichage(num + " - Resultat:\n\n");
+                affichage(msg_error + "\n\n");
+                affichage("Appuyez sur une entrer pour quitter.... ");
+                new Scanner(System.in).nextLine();
+            }
+        }
+        //On vérifie que la liste n'est pas vide
 
     }
 
     public static void affichage(Object obj){
         System.out.print(obj);
+    }
+
+
+    public void setTree(ArbreGenealogique arb){
+        this.arbreGenealogique = arb;
+        this.menuGestionFamille();
     }
 
     public void mainMenu(){
@@ -39,5 +84,9 @@ public class Process {
                     break;
             }
         }while (repeter!=0);
+    }
+
+    public void menuGestionFamille(){
+
     }
 }
