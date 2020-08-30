@@ -102,10 +102,20 @@ public class Personne implements Serializable {
         enfant.parent = this;
     }
 
+    public Integer getNbSpace() {
+
+        Personne actu = this;
+        if (actu.parent!=null){
+            return actu.parent.getNbSpace() + 2;
+        } else {
+            return 0;
+        }
+    }
+
     public void afficheEnfant(){
-        this.enfants.forEach(
-                Process.affichage(enfants);
-        );
+        this.enfants.forEach(enfant-> {
+            Process.affichage(enfant  + "\n\n");
+        });
     }
 
     @Override
