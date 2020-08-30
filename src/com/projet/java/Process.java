@@ -14,7 +14,7 @@ public class Process {
 
     public void mainMenu(){
         int repeter = 1;
-        while(repeter!=0) {
+        do {
             affichage("  Menu  Principale\n\n");
             affichage(" 1 - Creer un arbre \n");
             affichage(" 2 - Choisir un arbre existant \n");
@@ -26,6 +26,7 @@ public class Process {
                     this.arbreGenealogique = new ArbreGenealogique(new Personne("New"));
                     break;
                 case"2":
+                    affichage("en cours");
                     break;
                 case"0":
                     repeter =0;
@@ -33,5 +34,5 @@ public class Process {
                 default:
                     break;
         }
-    }
+    }while (repeter!=0);
 }
