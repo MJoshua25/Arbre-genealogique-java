@@ -11,7 +11,10 @@ public class ArbreGenealogique implements Serializable {
         this.root = first;
     }
 
-    public ArbreGenealogique() {
-
+    public void afficheArbre(Personne membre, Integer space){
+        Process.affichage(Process.setSpace(space) + membre + "\n" );
+        membre.enfants.forEach(enfant ->{
+            afficheArbre(enfant, space+2);
+        });
     }
 }
