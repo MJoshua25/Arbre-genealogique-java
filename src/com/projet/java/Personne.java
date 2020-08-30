@@ -61,6 +61,9 @@ public class Personne implements Serializable {
     }
 
     public void addEnfant(Personne enfant){
+        for (Personne frere:this.enfants) {
+            frere.freres.add(enfant);
+        }
         this.enfants.add(enfant);
         enfant.parent = this;
     }
