@@ -8,6 +8,10 @@ public class Process {
     ArbreGenealogique arbreGenealogique = null;
     Personne focus = null;
 
+    public void setTree(ArbreGenealogique arb){
+
+    }
+
     public static void affichage(Object obj){
         System.out.print(obj);
     }
