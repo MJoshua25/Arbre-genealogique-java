@@ -55,6 +55,10 @@ public class Process {
         System.out.print(obj);
     }
 
+    public String setSpace(Integer nb){
+        return new String(new char[nb]).replace("\0", " ");
+    }
+
 
     public void setTree(ArbreGenealogique arb){
         this.arbreGenealogique = arb;

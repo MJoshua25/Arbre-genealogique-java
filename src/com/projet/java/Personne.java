@@ -102,6 +102,12 @@ public class Personne implements Serializable {
         enfant.parent = this;
     }
 
+    public void afficheEnfant(){
+        this.enfants.forEach(
+                Process.affichage(enfants);
+        );
+    }
+
     @Override
     public String toString() {
         return nom + " " + prenoms + '(' + sexe + ')' ;
