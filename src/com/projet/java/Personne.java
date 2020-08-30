@@ -61,7 +61,7 @@ public class Personne implements Serializable {
         this.enfants = new LinkedList<>();
     }
     public Personne(String option){
-        if (option=="New"){
+        if (option.equals("New")){
             Scanner sc = new Scanner(System.in);
             System.out.print("Entrer le nom: ");
             this.nom = sc.nextLine();
@@ -88,9 +88,8 @@ public class Personne implements Serializable {
                 }
             }
         }
-        this.statut = "Cadet";
         this.parent = null;
-        this.freres_personne = new LinkedList<>();
+        this.freres = new LinkedList<>();
         this.enfants = new LinkedList<>();
 
     }
