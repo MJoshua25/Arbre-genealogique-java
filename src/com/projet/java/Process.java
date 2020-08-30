@@ -103,7 +103,7 @@ public class Process {
             affichage("\n");
             switch (option) {
                 case "1":
-                    affichage("en développement");
+                    this.arbreGenealogique.afficheArbre(this.arbreGenealogique.root, 0);
                     break;
                 case "2":
                     affichage("en développement");
