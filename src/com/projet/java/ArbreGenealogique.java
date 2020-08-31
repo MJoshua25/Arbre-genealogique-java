@@ -71,14 +71,14 @@ public class ArbreGenealogique implements Serializable {
         //Pour changer l'affichage
         boolean exist= false;
         //On verifie si l'arbre se trouve dans le fichier data.txt
-        if(existTree(this.root)){
+        if(existTree()){
             exist = true;
-            Iterator<Personne> it = arbres.iterator();
+            Iterator<LinkedList<Personne>> it = arbres.iterator();
             while( it.hasNext() ) {
 
-                Personne pers = it.next();
+                LinkedList<Personne> pers = it.next();
                 //On ecrase l'ancienne valeur de l'arbre du root
-                if( pers.getId().toString().equals(root.getId().toString())) {
+                if( pers.get(0).getId().toString().equals(this.root.getId().toString())) {
                     it.remove();
                 }
 
@@ -91,7 +91,7 @@ public class ArbreGenealogique implements Serializable {
 //                }
 //            }
             //On ajoute la nouvelle à la liste des arbres
-            arbres.add(root);
+            arbres.add(this.getMembers());
 
             //On efface le contenu du fichier
             PrintWriter pw = null; // >>>> on ajoutera après suppression de ce qui existait éventuellement
