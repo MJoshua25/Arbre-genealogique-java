@@ -133,6 +133,33 @@ public class ArbreGenealogique implements Serializable {
 
     }
 
+    boolean existTree(){
+        File fichier =  new File("data.txt") ;
+
+        try {
+            // ouverture d'un flux d'entrée sur data.txt
+            ObjectInputStream ois =  new ObjectInputStream(new FileInputStream(fichier)) ;
+            try {
+                //On recupère les arbres
+                LinkedList<LinkedList<Personne>> arbres_data = (LinkedList<LinkedList<Personne>>) ois.readObject();
+                for (LinkedList<Personne> tree:arbres_data
+                ) {
+                    if (tree.get(0).getId().equals(this.root.getId()))
+                        return true;
+                }
+
+            } catch (ClassNotFoundException e) {
+                e.printStackTrace();
+            }
+            ois.close();
+
+        } catch (IOException e) {
+
+            Fonctionnalite.affichage("Aucun arbre enregistré\n");
+        }
+        return false;
+    }
+
     public static LinkedList<Personne> getTrees(){
         File fichier =  new File("data.txt");
         LinkedList<Personne> arbre = new LinkedList<>();
