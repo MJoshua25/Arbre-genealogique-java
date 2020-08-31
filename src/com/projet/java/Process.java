@@ -161,6 +161,9 @@ public class Process {
                 case"5":
                     this.focus.setEnfants(new Personne("New"));
                     break;
+                case"7":
+                    affichage("\n " + this.focus.parent+ "\n");
+                    break;
                 case"8":
                     Personne parent = new Personne("New");
                     this.arbreGenealogique.root.parent =parent;
