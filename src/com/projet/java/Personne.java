@@ -116,6 +116,10 @@ public class Personne implements Serializable {
         }
     }
 
+    public void setEnfants(LinkedList<Personne> enfants) {
+        this.enfants = enfants;
+    }
+
     public void addEnfant(Personne enfant){
         for (Personne frere:this.enfants) {
             frere.setFreres(enfant);
