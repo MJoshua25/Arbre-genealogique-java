@@ -125,5 +125,9 @@ public class Process {
         affichage("  2 - Lister les enfants" + "\n" );
         affichage("  3 - Lister les freres (ou soeurs)" +"\n" );
         affichage("  4 - Lister les ascendants" +"\n\n" );
+
+        affichage("  0 - Retour \n\n" );
+        affichage("Veuillez choisir une option... ");
+        String option = new Scanner(System.in).next();
     }
 }
