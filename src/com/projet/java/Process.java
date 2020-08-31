@@ -110,7 +110,8 @@ public class Process {
                     this.arbreGenealogique.afficheArbre(this.arbreGenealogique.root, 0);
                     break;
                 case "3":
-                    this.arbreGenealogique.afficheArbre(this.arbreGenealogique.root, 0);
+                    this.focus = this.arbreGenealogique.getMember();
+                    this.menuGestionPersonne();
                     break;
                 case "0":
 //                    ArbreGenealogique.saveTree(root);
