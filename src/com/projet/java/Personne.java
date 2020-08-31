@@ -191,6 +191,7 @@ public class Personne implements Serializable {
         });
     }
 
+    //REDEFINITION DE LA METHODE toString
     @Override
     public String toString() {
         return nom + " " + prenoms + '(' + sexe + ')' ;
