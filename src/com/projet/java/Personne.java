@@ -105,7 +105,7 @@ public class Personne implements Serializable {
             this.freres.add(frere);
         } else if (this.freres.get(0).age < frere.age) {
             this.freres.add(0, frere);
-        } else if (this.freres.get(this.freres.size()).age > frere.age){
+        } else if (this.freres.get(this.freres.size() -1).age > frere.age){
             this.freres.add(frere);
         } else {
             int i =0;
@@ -118,7 +118,7 @@ public class Personne implements Serializable {
 
     public void addEnfant(Personne enfant){
         for (Personne frere:this.enfants) {
-            frere.freres.add(enfant);
+            frere.setFreres(enfant);
         }
         this.enfants.add(enfant);
         enfant.parent = this;
