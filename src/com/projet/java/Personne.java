@@ -191,6 +191,50 @@ public class Personne implements Serializable {
         });
     }
 
+    public static void modifierInfo(){
+        int repeter = 1;
+        while(repeter!=0){
+            Process.affichage("Modification de "+personne.getNom()+"\n");
+            Process.affichage("1-Nom\t2-Prenom\t3-Sexe\t4-Nom, prénoms et sexe\t0-retour\n\n");
+            Process.affichage("Votre choix: ");
+            String choix = new Scanner(System.in).next();
+            switch (choix){
+                case "1":
+                    Process.affichage("Entrer le nouveau nom: ");
+                    personne.setNom(new Scanner(System.in).nextLine());
+                    Process.affichage("Modification effectuée\n");
+                    repeter = 0;
+                    break;
+                case "2":
+                    Process.affichage("Entrer le nouveau prenom: ");
+                    personne.setPrenoms(new Scanner(System.in).nextLine());
+                    Process.affichage("Modification effectuée\n");
+                    repeter = 0;
+                    break;
+                case "3":
+                    choisirSexe(personne);
+                    repeter = 0;
+                    break;
+                case "4":
+                    Process.affichage("Entrer le nouveau nom: ");
+                    personne.setNom(new Scanner(System.in).nextLine());
+                    Process.affichage("Entrer le nouveau prenom: ");
+                    personne.setPrenoms(new Scanner(System.in).nextLine());
+                    Process.affichage("\n");
+                    choisirSexe(personne);
+                    repeter = 0;
+                    break;
+                case "0":
+                    repeter=0;
+                    break;
+                default:
+                    Process.affichage("Mauvaise entrée veuillez recommencer..\n");
+                    break;
+            }
+        }
+
+    }
+
     //REDEFINITION DE LA METHODE toString
     @Override
     public String toString() {
