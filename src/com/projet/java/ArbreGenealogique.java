@@ -60,7 +60,7 @@ public class ArbreGenealogique implements Serializable {
         }
 
     }
-    public void saveTree(Personne root){
+    public void saveTree(){
         //On ajoute ici la racine à un grand arbre qui contient tous les arbres crées
         /*La classe LinkedListe est une classe sérializable elle va nous permettre de stocker plusieurs objets au lieu
         d'un seul.
@@ -160,15 +160,15 @@ public class ArbreGenealogique implements Serializable {
         return false;
     }
 
-    public static LinkedList<Personne> getTrees(){
+    public static LinkedList<LinkedList<Personne>> getTrees(){
         File fichier =  new File("data.txt");
-        LinkedList<Personne> arbre = new LinkedList<>();
+        LinkedList<LinkedList<Personne>> arbre = new LinkedList<LinkedList<Personne>>();
         try {
             // ouverture d'un flux d'entrée sur data.txt
             ObjectInputStream ois = new ObjectInputStream(new FileInputStream(fichier));
             try {
                 //On recupère les arbres
-                arbre =  (LinkedList<Personne>) ois.readObject();
+                arbre =  (LinkedList<LinkedList<Personne>>) ois.readObject();
                 arbres = arbre;
             }catch (Exception e){
                 System.out.print("Aucun objet");
