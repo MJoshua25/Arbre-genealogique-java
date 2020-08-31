@@ -48,6 +48,7 @@ public class ArbreGenealogique implements Serializable {
         return this.getMembers().get(option);
     }
 
+    // METHODE POUR AJOUTER UN MEMBRE A L'ARBRE GENEALOGIQUE
     public void addMember(){
         Process.affichage("Choisissez son parent\n");
         for (int i = 0; i<this.getMembers().size(); i++){
