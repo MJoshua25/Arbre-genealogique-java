@@ -140,7 +140,7 @@ public class Personne implements Serializable {
         for (Personne frere:this.enfants) {
             frere.setFreres(enfant);
         }
-        this.enfants.add(enfant);
+        this.setEnfants(enfant);
         enfant.parent = this;
     }
 
