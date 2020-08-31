@@ -4,6 +4,7 @@ package com.projet.java;
 import java.io.Serializable;
 import java.util.LinkedList;
 import java.util.Scanner;
+import java.util.UUID;
 
 public class Personne implements Serializable {
     String nom;
@@ -14,6 +15,7 @@ public class Personne implements Serializable {
     Integer age;
     LinkedList<Personne> enfants;
     LinkedList<Personne> freres;
+    private UUID id;
 
     public String getNom() {
         return nom;
@@ -39,7 +41,7 @@ public class Personne implements Serializable {
         this.sexe = sexe;
     }
 
-
+    /* <<<<<  DEBUT CONSTRUCTEURS >>>>> */
     public Personne(String nom, String prenoms, String sexe, Integer age){
 
         this.nom = nom;
