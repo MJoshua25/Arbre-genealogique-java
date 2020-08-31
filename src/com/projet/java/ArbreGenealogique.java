@@ -6,6 +6,7 @@ import java.util.LinkedList;
 import java.util.Scanner;
 
 public class ArbreGenealogique implements Serializable {
+    private static LinkedList<LinkedList<Personne>>arbres = new LinkedList<>();
     Personne root;
     private LinkedList<Personne> members = new LinkedList<Personne>();
 
@@ -104,7 +105,7 @@ public class ArbreGenealogique implements Serializable {
             pw.close();
         }else {
             //On ajoute le root à la liste des arbres
-            arbres.add(root);
+            arbres.add(this.getMembers());
         }
 
         File fichier = new File("data.txt");
