@@ -120,6 +120,22 @@ public class Personne implements Serializable {
         this.enfants = enfants;
     }
 
+    public void setEnfants(Personne enfant){
+        if (this.enfants.size() == 0){
+            this.enfants.add(enfant);
+        } else if (this.enfants.get(0).age < enfant.age) {
+            this.enfants.add(0, enfant);
+        } else if (this.enfants.get(this.enfants.size() -1).age > enfant.age){
+            this.enfants.add(enfant);
+        } else {
+            int i =0;
+            while (this.enfants.get(i).age > enfant.age){
+                i++;
+            }
+            enfants.add(i, enfant);
+        }
+    }
+
     public void addEnfant(Personne enfant){
         for (Personne frere:this.enfants) {
             frere.setFreres(enfant);
