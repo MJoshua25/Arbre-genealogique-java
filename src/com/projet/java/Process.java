@@ -133,6 +133,8 @@ public class Process {
             affichage("  3 - Lister les freres (ou soeurs)" + "\n");
             affichage("  4 - Lister les ascendants" + "\n\n");
             affichage("  5 - Ajouter un enfant \n" );
+            if(focus.parent !=null)
+                affichage("  6 - Ajouter un ou des freres(ou soeurs) de la personne \n" );
 
             if(focus.parent ==null) {
                 affichage("  7 - Ajouter un parent \n");
@@ -141,6 +143,9 @@ public class Process {
             }
             if(!this.focus.enfants.isEmpty())
                 affichage("\n  10 - Afficher l'ainé des enfants\n" );
+
+            if(this.focus.parent.enfants.size()>1)
+                affichage("\n  11 - Afficher l'ainé des frères\n" );
 
             affichage("  0 - Retour \n\n");
             affichage("Veuillez choisir une option... ");
@@ -163,6 +168,9 @@ public class Process {
                 case"5":
                     this.focus.setEnfants(new Personne("New"));
                     break;
+                case"6":
+                    this.focus.parent.setEnfants(new Personne("New"));
+                    break;
                 case"7":
                     affichage("\n " + this.focus.parent+ "\n");
                     break;
@@ -173,6 +181,9 @@ public class Process {
                     break;
                 case"10":
                     affichage("\n " + this.focus.enfants.get(0)+ "\n");
+                    break;
+                case"11":
+                    affichage("\n " + this.focus.parent.enfants.get(0)+ "\n");
                     break;
                 case "0":
                     repeat = 0;
