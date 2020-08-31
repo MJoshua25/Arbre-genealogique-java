@@ -198,7 +198,7 @@ public class Process {
     public void selectTree(){
         int repeter = 1;
         while(repeter!=0) {
-            affichage("Liste des arbres");
+            affichage("Liste des arbres \n");
             int i = 1;
             if (!(ArbreGenealogique.getTrees().isEmpty())){
                 LinkedList<LinkedList<Personne>> arbres = ArbreGenealogique.getTrees();
