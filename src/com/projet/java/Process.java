@@ -137,6 +137,11 @@ public class Process {
                 case"1":
                     affichage("en développement");
                     break;
+                case"2":
+                    //Afficher la liste des enfants
+
+                    //On vérifie que la liste n'est pas vide
+                    afficherListe(focus.enfants,2,"Aucun enfant enregistré","Suivi");
                 case "0":
                     repeat = 0;
                     break;
