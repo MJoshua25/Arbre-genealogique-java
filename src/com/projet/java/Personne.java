@@ -96,6 +96,26 @@ public class Personne implements Serializable {
 
     }
 
+    public void setFreres(LinkedList<Personne> freres) {
+        this.freres = freres;
+    }
+
+    public void setFreres(Personne frere){
+        if (this.freres.size() == 0){
+            this.freres.add(frere);
+        } else if (this.freres.get(0).age < frere.age) {
+            this.freres.add(0, frere);
+        } else if (this.freres.get(this.freres.size()).age > frere.age){
+            this.freres.add(frere);
+        } else {
+            int i =0;
+            while (this.freres.get(i).age > frere.age){
+                i++;
+            }
+            freres.add(i, frere);
+        }
+    }
+
     public void addEnfant(Personne enfant){
         for (Personne frere:this.enfants) {
             frere.freres.add(enfant);
@@ -116,7 +136,7 @@ public class Personne implements Serializable {
 
     public void afficheEnfant(){
         this.enfants.forEach(enfant-> {
-            Process.affichage(enfant  + "\n\n");
+            Process.affichage(enfant  + "\n");
         });
     }
 
