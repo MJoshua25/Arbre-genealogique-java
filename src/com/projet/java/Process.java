@@ -79,7 +79,7 @@ public class Process {
                     this.setTree(new ArbreGenealogique(new Personne("New")));
                     break;
                 case "2":
-                    affichage("en cours");
+                    this.selectTree();
                     break;
                 case "0":
                     repeter = 0;
@@ -114,7 +114,7 @@ public class Process {
                     this.menuGestionPersonne();
                     break;
                 case "0":
-//                    ArbreGenealogique.saveTree(root);
+                    this.arbreGenealogique.saveTree();
                     repeat = 0;
                     break;
 
