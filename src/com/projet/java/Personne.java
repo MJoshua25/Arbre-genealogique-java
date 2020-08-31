@@ -103,7 +103,7 @@ public class Personne implements Serializable {
     public LinkedList<Personne> getAscendant(){
         if (this.parent!=null){
             LinkedList<Personne> aux = parent.getAscendant();
-            aux.add(this);
+            aux.add(this.parent);
             return aux;
         } else {
             return new LinkedList<Personne>();
