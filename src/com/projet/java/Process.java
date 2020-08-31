@@ -120,6 +120,10 @@ public class Process {
     }
 
     public void menuGestionPersonne(){
-
+        affichage("**** - Arbre Généalogique de "+focus.getNom()+" "+focus.getPrenoms()+" ****");
+        affichage("\n\n  1 - Modifier les informations" +"\n");
+        affichage("  2 - Lister les enfants" + "\n" );
+        affichage("  3 - Lister les freres (ou soeurs)" +"\n" );
+        affichage("  4 - Lister les ascendants" +"\n\n" );
     }
 }
