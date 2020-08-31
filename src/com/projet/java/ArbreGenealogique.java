@@ -8,6 +8,11 @@ import java.util.Scanner;
 public class ArbreGenealogique implements Serializable {
     private static LinkedList<LinkedList<Personne>>arbres = new LinkedList<>();
     Personne root;
+
+    public ArbreGenealogique(LinkedList<Personne> list_members){
+        this.root = list_members.get(0);
+    }
+
     private LinkedList<Personne> members = new LinkedList<Personne>();
 
     public LinkedList<Personne> getMembers() {

@@ -183,7 +183,8 @@ public class Process {
                 try{
                     int choix1 = Integer.parseInt(choix);
                     if(choix1 < i && choix1!=0){
-                        Fonctionnalite.menuGestionPersonne(arbres.get(choix1-1));
+                        this.arbreGenealogique = new ArbreGenealogique(arbres.get(choix1-1));
+                        this.menuGestionFamille();
                     }else if(choix1 == 0)
                         repeter = 0;
                     else {
