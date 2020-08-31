@@ -137,9 +137,9 @@ public class Process {
                 affichage("  6 - Ajouter un ou des freres(ou soeurs) de la personne \n" );
 
             if(focus.parent ==null) {
-                affichage("  7 - Ajouter un parent \n");
+                affichage("  8 - Ajouter un parent \n");
             } else {
-                affichage("  8 - Afficher le parent \n");
+                affichage("  7 - Afficher le parent \n");
             }
             if(!this.focus.enfants.isEmpty())
                 affichage("\n  10 - Afficher l'ainé des enfants\n" );
@@ -176,7 +176,7 @@ public class Process {
                     break;
                 case"8":
                     Personne parent = new Personne("New");
-                    this.arbreGenealogique.root.parent =parent;
+                    parent.setEnfants(this.arbreGenealogique.root);
                     this.arbreGenealogique.root = parent;
                     break;
                 case"10":
