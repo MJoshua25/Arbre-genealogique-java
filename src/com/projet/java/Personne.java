@@ -102,6 +102,29 @@ public class Personne implements Serializable {
         return sexe;
     }
 
+    public void setSexe(){
+        while(true)
+        {
+            Process.affichage("\nSexe:\n 1. Masculin\n 2. Feminin\nChoix: ");
+
+            int opt=Integer.parseInt(sc.next());
+            if(opt==1)
+            {
+                this.sexe = "Masculin";
+                break;
+            }
+            else if(opt==2)
+            {
+                this.sexe = "Féminin";
+                break;
+            }
+            else
+            {
+                Process.affichage("\nMauvais choix\nVeuiller recommencer...  ");
+            }
+        }
+    }
+
     public void setSexe(String sexe) {
         this.sexe = sexe;
     }
@@ -191,37 +214,37 @@ public class Personne implements Serializable {
         });
     }
 
-    public static void modifierInfo(){
+    public void modifierInfo(){
         int repeter = 1;
         while(repeter!=0){
-            Process.affichage("Modification de "+personne.getNom()+"\n");
+            Process.affichage("Modification de "+this.getNom()+"\n");
             Process.affichage("1-Nom\t2-Prenom\t3-Sexe\t4-Nom, prénoms et sexe\t0-retour\n\n");
             Process.affichage("Votre choix: ");
             String choix = new Scanner(System.in).next();
             switch (choix){
                 case "1":
                     Process.affichage("Entrer le nouveau nom: ");
-                    personne.setNom(new Scanner(System.in).nextLine());
+                    this.setNom(new Scanner(System.in).nextLine());
                     Process.affichage("Modification effectuée\n");
                     repeter = 0;
                     break;
                 case "2":
                     Process.affichage("Entrer le nouveau prenom: ");
-                    personne.setPrenoms(new Scanner(System.in).nextLine());
+                    this.setPrenoms(new Scanner(System.in).nextLine());
                     Process.affichage("Modification effectuée\n");
                     repeter = 0;
                     break;
                 case "3":
-                    choisirSexe(personne);
+                    this.setSexe();
                     repeter = 0;
                     break;
                 case "4":
                     Process.affichage("Entrer le nouveau nom: ");
-                    personne.setNom(new Scanner(System.in).nextLine());
+                    this.setNom(new Scanner(System.in).nextLine());
                     Process.affichage("Entrer le nouveau prenom: ");
-                    personne.setPrenoms(new Scanner(System.in).nextLine());
+                    this.setPrenoms(new Scanner(System.in).nextLine());
                     Process.affichage("\n");
-                    choisirSexe(personne);
+                    this.setSexe();
                     repeter = 0;
                     break;
                 case "0":
