@@ -158,6 +158,9 @@ public class Process {
                 case"4":
                     afficherListe(focus.getAscendant(),4,"Aucun acsendant enregistré","Normal");
                     break;
+                case"5":
+                    this.focus.setEnfants(new Personne("New"));
+                    break;
                 case "0":
                     repeat = 0;
                     break;
