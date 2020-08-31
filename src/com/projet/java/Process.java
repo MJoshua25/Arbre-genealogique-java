@@ -76,7 +76,7 @@ public class Process {
             String option = new Scanner(System.in).next();
             switch (option) {
                 case "1":
-                    this.arbreGenealogique = new ArbreGenealogique(new Personne("New"));
+                    this.setTree(new ArbreGenealogique(new Personne("New")));
                     break;
                 case "2":
                     affichage("en cours");
@@ -93,7 +93,7 @@ public class Process {
     public void menuGestionFamille(){
         int repeat = 1;
         do {
-            affichage("**** - Arbre Généalogique de la famille "+this.arbreGenealogique.root.getPrenoms()+" ****");
+            affichage("**** - Arbre Généalogique de la famille "+this.arbreGenealogique.root.getNom()+" ****");
             affichage("\n\n  1 - ajouter un membre à la famille \n");
             affichage("  2 - Lister les membres de la famille\n" );
             affichage("  0 - Retour \n\n" );
@@ -103,10 +103,10 @@ public class Process {
             affichage("\n");
             switch (option) {
                 case "1":
-                    this.arbreGenealogique.afficheArbre(this.arbreGenealogique.root, 0);
+                    affichage("en développement");
                     break;
                 case "2":
-                    affichage("en développement");
+                    this.arbreGenealogique.afficheArbre(this.arbreGenealogique.root, 0);
                     break;
                 case "0":
 //                    ArbreGenealogique.saveTree(root);
