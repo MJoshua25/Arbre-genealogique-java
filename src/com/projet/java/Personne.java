@@ -31,6 +31,7 @@ public class Personne implements Serializable {
         this.enfants = new LinkedList<>();
         this.id = UUID.randomUUID();
     }
+
     public Personne(String nom, String prenoms, String sexe, Personne parent, Integer age){
 
         this.nom = nom;
@@ -42,6 +43,7 @@ public class Personne implements Serializable {
         this.enfants = new LinkedList<>();
         this.id = UUID.randomUUID();
     }
+
     public Personne(String option){
         if (option.equals("New")){
             Scanner sc = new Scanner(System.in);
@@ -138,16 +140,6 @@ public class Personne implements Serializable {
         return this.id;
     }
 
-    public LinkedList<Personne> getAscendant(){
-        if (this.parent!=null){
-            LinkedList<Personne> aux = parent.getAscendant();
-            aux.add(this.parent);
-            return aux;
-        } else {
-            return new LinkedList<Personne>();
-        }
-    }
-
     public void setFreres(Personne frere){
         if (this.freres.size() == 0){
             this.freres.add(frere);
@@ -181,6 +173,18 @@ public class Personne implements Serializable {
                 i++;
             }
             enfants.add(i, enfant);
+        }
+    }
+
+    /* <<<<< FIN GETTERS ET SETTERS >>>>> */
+
+    public LinkedList<Personne> getAscendant(){
+        if (this.parent!=null){
+            LinkedList<Personne> aux = parent.getAscendant();
+            aux.add(this.parent);
+            return aux;
+        } else {
+            return new LinkedList<Personne>();
         }
     }
 
