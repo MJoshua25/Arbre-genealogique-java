@@ -147,7 +147,7 @@ public class Process {
 
             switch (option){
                 case"1":
-                    affichage("en développement");
+                    this.focus.modifierInfo();
                     break;
                 case"2":
                     //Afficher la liste des enfants
