@@ -174,7 +174,7 @@ public class Process {
                 LinkedList<LinkedList<Personne>> arbres = ArbreGenealogique.getTrees();
                 for (LinkedList<Personne> arbre: arbres
                 ) {
-                    affichage("\t"+i+" -"+arbre+"\n");
+                    affichage("\t"+i+" -"+arbre.get(0)+"\n");
                     i++;
                 }
                 affichage("\nVeuillez selectionner un Arbre (ou 0 pour annuler) ... ");
