@@ -118,4 +118,8 @@ public class Process {
             }
         }while (repeat!=0);
     }
+
+    public void menuGestionPersonne(){
+
+    }
 }
