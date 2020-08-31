@@ -36,7 +36,8 @@ public class ArbreGenealogique implements Serializable {
         for (int i = 0; i<this.getMembers().size(); i++){
             Process.affichage(i + "- " + this.getMembers().get(i) + "\n");
         }
-        Process.affichage(this.getMembers().size() + "- Nouveau root");
+        Process.affichage(this.getMembers().size() + "- Nouveau root \n");
+        Process.affichage("Veuillez choisir une option... ");
         Integer option = new Scanner(System.in).nextInt();
         if (option < this.getMembers().size()){
             this.getMembers().get(option).addEnfant(new Personne("New"));
