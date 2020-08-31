@@ -121,13 +121,13 @@ public class ArbreGenealogique implements Serializable {
             oos.writeObject(arbres);
             oos.close();
             if(exist)
-                Fonctionnalite.affichage("Sauvegarde de l'Arbre....ok\n");
+                Process.affichage("Sauvegarde de l'Arbre....ok\n");
             else {
-                Fonctionnalite.affichage("Création de l'arbre....ok\n");
+                Process.affichage("Création de l'arbre....ok\n");
             }
 
         } catch (IOException e) {
-            Fonctionnalite.affichage("Erreur dans la sauvegarde de l'arbre\n");
+            Process.affichage("Erreur dans la sauvegarde de l'arbre\n");
             e.printStackTrace();
         }
 
@@ -155,7 +155,7 @@ public class ArbreGenealogique implements Serializable {
 
         } catch (IOException e) {
 
-            Fonctionnalite.affichage("Aucun arbre enregistré\n");
+            Process.affichage("Aucun arbre enregistré\n");
         }
         return false;
     }
