@@ -9,7 +9,7 @@ public class Process {
     ArbreGenealogique arbreGenealogique = null;
     Personne focus = null;
 
-
+    /* <<<<<<<< DEBUT FONCTIONNALITÉS D'AFFICHAGE ET D'ERGONOMIE >>>>>>>> */
     //METHODE STATIQUE POUR AFFICHER UNE LES DONNÉES D'UNE LISTE
     private static void afficherListe(LinkedList<Personne> liste, int num, String msg_error, String mode){
         if ("Suivi".equals(mode)) {
@@ -58,6 +58,8 @@ public class Process {
     public static String setSpace(Integer nb){
         return new String(new char[nb]).replace("\0", " ");
     }
+
+    /* <<<<<<<< FIN FONCTIONNALITÉS D'AFFICHAGE ET D'ERGONOMIE >>>>>>>> */
 
 
     public void setTree(ArbreGenealogique arb){
