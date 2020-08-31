@@ -17,29 +17,7 @@ public class Personne implements Serializable {
     LinkedList<Personne> freres;
     private UUID id;
 
-    public String getNom() {
-        return nom;
-    }
 
-    public void setNom(String nom) {
-        this.nom = nom;
-    }
-
-    public String getPrenoms() {
-        return prenoms;
-    }
-
-    public void setPrenoms(String prenoms) {
-        this.prenoms = prenoms;
-    }
-
-    public String getSexe() {
-        return sexe;
-    }
-
-    public void setSexe(String sexe) {
-        this.sexe = sexe;
-    }
 
     /* <<<<<  DEBUT CONSTRUCTEURS >>>>> */
     public Personne(String nom, String prenoms, String sexe, Integer age){
@@ -96,6 +74,33 @@ public class Personne implements Serializable {
         this.freres = new LinkedList<>();
         this.enfants = new LinkedList<>();
 
+    }
+
+    /* <<<<< FIN CONSTRUCTEURS >>>>> */
+
+    /* <<<<< DEBUT GETTERS ET SETTERS >>>>> */
+    public String getNom() {
+        return nom;
+    }
+
+    public void setNom(String nom) {
+        this.nom = nom;
+    }
+
+    public String getPrenoms() {
+        return prenoms;
+    }
+
+    public void setPrenoms(String prenoms) {
+        this.prenoms = prenoms;
+    }
+
+    public String getSexe() {
+        return sexe;
+    }
+
+    public void setSexe(String sexe) {
+        this.sexe = sexe;
     }
 
     public void setFreres(LinkedList<Personne> freres) {
