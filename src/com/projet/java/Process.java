@@ -132,6 +132,17 @@ public class Process {
             affichage("Veuillez choisir une option... ");
             String option = new Scanner(System.in).next();
             affichage("\n");
+
+            switch (option){
+                case"1":
+                    affichage("en développement");
+                    break;
+                case "0":
+                    repeat = 0;
+                    break;
+                default:
+                    break;
+            }
         }while (repeat!=0);
     }
 }
