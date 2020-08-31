@@ -139,6 +139,8 @@ public class Process {
             } else {
                 affichage("  8 - Afficher le parent \n");
             }
+            if(!this.focus.enfants.isEmpty())
+                affichage("\n  10 - Afficher l'ainé des enfants\n" );
 
             affichage("  0 - Retour \n\n");
             affichage("Veuillez choisir une option... ");
@@ -168,6 +170,9 @@ public class Process {
                     Personne parent = new Personne("New");
                     this.arbreGenealogique.root.parent =parent;
                     this.arbreGenealogique.root = parent;
+                    break;
+                case"10":
+                    affichage("\n " + this.focus.enfants.get(0)+ "\n");
                     break;
                 case "0":
                     repeat = 0;
