@@ -31,6 +31,16 @@ public class ArbreGenealogique implements Serializable {
         });
     }
 
+    public Personne getMember(){
+        Process.affichage("Choisissez le membre :\n");
+        for (int i = 0; i<this.getMembers().size(); i++){
+            Process.affichage(i + "- " + this.getMembers().get(i) + "\n");
+        }
+        Process.affichage("Veuillez choisir une option... ");
+        Integer option = new Scanner(System.in).nextInt();
+        return this.getMembers().get(option);
+    }
+
     public void addMember(){
         Process.affichage("Choisissez son parent\n");
         for (int i = 0; i<this.getMembers().size(); i++){

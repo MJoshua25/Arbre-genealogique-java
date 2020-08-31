@@ -96,6 +96,7 @@ public class Process {
             affichage("**** - Arbre Généalogique de la famille "+this.arbreGenealogique.root.getNom()+" ****");
             affichage("\n\n  1 - ajouter un membre à la famille \n");
             affichage("  2 - Lister les membres de la famille\n" );
+            affichage("  3 - Selectionner un membre de la famille\n" );
             affichage("  0 - Retour \n\n" );
             affichage("Veuillez choisir une option... ");
 
@@ -106,6 +107,9 @@ public class Process {
                     this.arbreGenealogique.addMember();
                     break;
                 case "2":
+                    this.arbreGenealogique.afficheArbre(this.arbreGenealogique.root, 0);
+                    break;
+                case "3":
                     this.arbreGenealogique.afficheArbre(this.arbreGenealogique.root, 0);
                     break;
                 case "0":
