@@ -69,6 +69,7 @@ public class Process {
         this.menuGestionFamille();
     }
 
+    // METHODE PERMETTANT DE GERE LES ACTIONS SUR LE MENU PRINCIPALE
     public void mainMenu(){
         int repeter = 1;
         do {
@@ -94,6 +95,7 @@ public class Process {
         }while (repeter!=0);
     }
 
+    // METHODE PERMETTANT DE GERE LES ACTIONS SUR UNE FAMILLE
     public void menuGestionFamille(){
         int repeat = 1;
         do {
@@ -128,6 +130,7 @@ public class Process {
         }while (repeat!=0);
     }
 
+    // METHODE PERMETTANT DE GERE LES ACTIONS SUR UNE PERSONNE
     public void menuGestionPersonne(){
         int repeat = 1;
         do {
