@@ -6,6 +6,7 @@ import java.util.Scanner;
 
 public class ArbreGenealogique implements Serializable {
     Personne root;
+    private LinkedList<Personne> members = new LinkedList<>();
 
     public ArbreGenealogique(Personne first){
         this.root = first;
