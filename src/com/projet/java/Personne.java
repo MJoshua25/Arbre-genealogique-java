@@ -29,6 +29,7 @@ public class Personne implements Serializable {
         this.parent = null;
         this.freres = new LinkedList<>();
         this.enfants = new LinkedList<>();
+        this.id = UUID.randomUUID();
     }
     public Personne(String nom, String prenoms, String sexe, Personne parent, Integer age){
 
@@ -39,6 +40,7 @@ public class Personne implements Serializable {
         this.parent = parent;
         this.freres = new LinkedList<>();
         this.enfants = new LinkedList<>();
+        this.id = UUID.randomUUID();
     }
     public Personne(String option){
         if (option.equals("New")){
@@ -73,6 +75,7 @@ public class Personne implements Serializable {
         this.parent = null;
         this.freres = new LinkedList<>();
         this.enfants = new LinkedList<>();
+        this.id = UUID.randomUUID();
 
     }
 
