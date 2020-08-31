@@ -163,4 +163,42 @@ public class Process {
             }
         }while (repeat!=0);
     }
+
+    // METHODE STATIQUE PERMETTANT DE SELECTIONNER UN ARBRE PREALABLEMENT ENREGISTRÉ
+    public void selectTree(){
+        int repeter = 1;
+        while(repeter!=0) {
+            affichage("Liste des arbres");
+            int i = 1;
+            if (!(ArbreGenealogique.getTrees().isEmpty())){
+                LinkedList<LinkedList<Personne>> arbres = ArbreGenealogique.getTrees();
+                for (LinkedList<Personne> arbre: arbres
+                ) {
+                    affichage("\t"+i+" -"+arbre+"\n");
+                    i++;
+                }
+                affichage("\nVeuillez selectionner un Arbre (ou 0 pour annuler) ... ");
+                String choix = new Scanner(System.in).nextLine();
+                affichage("\n");
+                try{
+                    int choix1 = Integer.parseInt(choix);
+                    if(choix1 < i && choix1!=0){
+                        Fonctionnalite.menuGestionPersonne(arbres.get(choix1-1));
+                    }else if(choix1 == 0)
+                        repeter = 0;
+                    else {
+                        affichage("Mauvais choix veuillez recommencer !\n");
+                    }
+
+                }catch (Exception e){
+//                    e.printStackTrace();
+                    affichage("Mauvaise saisie veuillez recommencer !\n");
+                }
+
+            }else {
+                repeter = 0;
+                affichage("Vous n'avez pas encore renseigné d'arbres!\n");
+            }
+        }
+    }
 }
