@@ -31,6 +31,7 @@ public class ArbreGenealogique implements Serializable {
         this.root = first;
     }
 
+    // METHODE POUR AFFICHER L'ARBRE GENEALOGIQUE
     public void afficheArbre(Personne membre, Integer space){
         Process.affichage(Process.setSpace(space) + membre + "\n" );
         membre.enfants.forEach(enfant ->{
@@ -38,6 +39,7 @@ public class ArbreGenealogique implements Serializable {
         });
     }
 
+    // METHODE POUR RECUPERER UN MEMBRE DE L'ARBRE GENEALOGIQUE
     public Personne getMember(){
         Process.affichage("Choisissez le membre :\n");
         for (int i = 0; i<this.getMembers().size(); i++){
