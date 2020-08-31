@@ -88,13 +88,6 @@ public class ArbreGenealogique implements Serializable {
                 }
 
             }
-//            for (Personne pers:arbres
-//            ) {
-//                //On ecrase l'ancienne valeur de l'arbre du root
-//                if (pers.getId().toString().equals(root.getId().toString())){
-//                    arbres.remove(pers);
-//                }
-//            }
             //On ajoute la nouvelle à la liste des arbres
             arbres.add(this.getMembers());
 
