@@ -51,10 +51,12 @@ public class Process {
 
     }
 
+    // METHODE STATIQUE POUR AFFICHER LES MESSAGES
     public static void affichage(Object obj){
         System.out.print(obj);
     }
 
+    // METHODE STATIQUE POUR AFFICHER DES ESPACES
     public static String setSpace(Integer nb){
         return new String(new char[nb]).replace("\0", " ");
     }
