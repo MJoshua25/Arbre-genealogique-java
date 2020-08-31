@@ -155,6 +155,9 @@ public class Process {
                 case"3":
                     afficherListe(focus.freres,3,"Aucun frère enregistré","Normal");
                     break;
+                case"4":
+                    afficherListe(focus.getAscendant(),4,"Aucun acsendant enregistré","Normal");
+                    break;
                 case "0":
                     repeat = 0;
                     break;
