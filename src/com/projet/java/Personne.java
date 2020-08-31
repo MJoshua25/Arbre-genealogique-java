@@ -100,6 +100,16 @@ public class Personne implements Serializable {
         this.freres = freres;
     }
 
+    public LinkedList<Personne> getAscendant(){
+        if (this.parent!=null){
+            LinkedList<Personne> aux = parent.getAscendant();
+            aux.add(this);
+            return aux;
+        } else {
+            return new LinkedList<Personne>();
+        }
+    }
+
     public void setFreres(Personne frere){
         if (this.freres.size() == 0){
             this.freres.add(frere);

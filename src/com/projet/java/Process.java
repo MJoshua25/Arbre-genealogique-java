@@ -132,6 +132,13 @@ public class Process {
             affichage("  2 - Lister les enfants" + "\n");
             affichage("  3 - Lister les freres (ou soeurs)" + "\n");
             affichage("  4 - Lister les ascendants" + "\n\n");
+            affichage("  5 - Ajouter un enfant \n" );
+
+            if(focus.parent ==null) {
+                affichage("  7 - Ajouter un parent \n");
+            } else {
+                affichage("  8 - Afficher le parent \n");
+            }
 
             affichage("  0 - Retour \n\n");
             affichage("Veuillez choisir une option... ");
