@@ -103,6 +103,7 @@ public class Personne implements Serializable {
     }
 
     public void setSexe(){
+        Scanner sc = new Scanner(System.in);
         while(true)
         {
             Process.affichage("\nSexe:\n 1. Masculin\n 2. Feminin\nChoix: ");
