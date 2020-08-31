@@ -144,9 +144,10 @@ public class Process {
                     break;
                 case"2":
                     //Afficher la liste des enfants
-
-                    //On vérifie que la liste n'est pas vide
                     afficherListe(focus.enfants,2,"Aucun enfant enregistré","Suivi");
+                case"3":
+                    afficherListe(focus.freres,3,"Aucun frère enregistré","Normal");
+                    break;
                 case "0":
                     repeat = 0;
                     break;
