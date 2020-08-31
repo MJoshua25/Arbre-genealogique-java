@@ -30,4 +30,13 @@ public class ArbreGenealogique implements Serializable {
             afficheArbre(enfant, space+2);
         });
     }
+
+    public void addMember(){
+        Process.affichage("Choisissez son parent\n");
+        for (int i = 0; i<this.getMembers().size(); i++){
+            Process.affichage(i + "- " + this.getMembers().get(i) + "\n");
+        }
+        Process.affichage(this.getMembers().size() + "- Nouveau root");
+
+    }
 }
