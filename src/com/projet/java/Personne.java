@@ -110,6 +110,10 @@ public class Personne implements Serializable {
         this.freres = freres;
     }
 
+    public UUID getId(){
+        return this.id;
+    }
+
     public LinkedList<Personne> getAscendant(){
         if (this.parent!=null){
             LinkedList<Personne> aux = parent.getAscendant();
