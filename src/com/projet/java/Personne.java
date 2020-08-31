@@ -137,11 +137,18 @@ public class Personne implements Serializable {
     }
 
     public void addEnfant(Personne enfant){
-        for (Personne frere:this.enfants) {
-            frere.setFreres(enfant);
+        if (enfant.equals(this))
+            Process.affichage("Impossible de s'ajouter soit même comme enfant \n");
+        else if (this.enfants.contains(enfant)){
+            Process.affichage("Impossible d'ajouter 2 fois le même enfant \n");
         }
-        this.setEnfants(enfant);
-        enfant.parent = this;
+        else {
+            for (Personne frere : this.enfants) {
+                frere.setFreres(enfant);
+            }
+            this.setEnfants(enfant);
+            enfant.parent = this;
+        }
     }
 
     public Integer getNbSpace() {
